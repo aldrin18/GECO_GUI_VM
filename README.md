@@ -1,6 +1,6 @@
 ### 1. Setting the `wsl` environment
 
-- Check available distro using the following comamnd: `wslconfig.exe /l`
+- Check available distro using the following command: `wslconfig.exe /l`
 
 - Set `Ubuntu` as the default distro when running `wsl` using the following command: `wslconfig.exe /s Ubuntu`
 
