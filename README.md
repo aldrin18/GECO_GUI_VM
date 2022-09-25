@@ -69,3 +69,17 @@ while this one must be placed inside `/mnt/c/apps`. Create `apps` if it is not y
 ```
 git clone -b automated https://PERSONALACCESSTOKEN@github.com/fgmp/ncov2019-artic-nf-GECO.git
 ```
+
+
+### 5. Setting up a `conda` environment
+- Create `conda` environment and activate
+```
+conda create -n nextflowv20.10
+
+conda activate nextflowv20.10
+```
+
+- Install `nextflow` version `20.10` in the created environment
+```
+conda install -c bioconda nextflow=20.10
+```
