@@ -74,5 +74,29 @@ conda install usher
 ```
 
 
+### 4.c Setting up a `conda` environment: `redcap_gisaid`
+- Create `conda` environment and activate
+```
+conda create -n redcap_gisaid
+
+conda activate redcap_gisaid
+```
+
+- Install the following packages in the created environment
+```
+conda install sqlite
+conda install python
+conda install pysimplegui
+conda install pandas
+conda install pycparser
+conda install pyopenssl
+conda install pyfaidx
+conda install zlib
+conda install pysocks
+conda install xlutils
+pip install PyCap
+```
+
+
 ### 5. Solution to `bammix.py` error
 - Place the `hdf5` folder into the `ncov2019-artic-nf-GECO/conda/artic-env/lib/`
