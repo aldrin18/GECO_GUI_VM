@@ -39,10 +39,10 @@ git clone -b automated https://PERSONALACCESSTOKEN@github.com/fgmp/ncov2019-arti
 ### 3. Editing configuration files
 - In the `ncov2019-artic-nf-GECO/conf/redcap.config`, replace `redcap_url` with `https://geco.ritm-edc.net/redcap/api/` and the `redcap_token` with `YOURWORKING_REDCAP_TOKEN`
 - In the system's `/etc/hosts` file, add `192.168.20.33 geco.ritm-edc.net` above the IPv6 capable hosts
-- Place the `hdf5` folder into the `ncov2019-artic-nf-GECO/conda/artic-env/lib/`
 
+</br>
 
-### 4. Setting up a `conda` environment
+### 4.a Setting up a `conda` environment: `nextflow version 20.10`
 - Create `conda` environment and activate
 ```
 conda create -n nextflowv20.10
@@ -54,3 +54,25 @@ conda activate nextflowv20.10
 ```
 conda install -c bioconda nextflow=20.10
 ```
+
+### 4.b Setting up a `conda` environment: `postArtic`
+- Create `conda` environment and activate
+```
+conda create -n postArtic
+
+conda activate postArtic
+```
+
+- Install `nextclade` and `UShER` in the created environment
+```
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+
+conda install nextclade
+conda install usher
+```
+
+
+### 5. Solution to `bammix.py` error
+- Place the `hdf5` folder into the `ncov2019-artic-nf-GECO/conda/artic-env/lib/`
