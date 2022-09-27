@@ -39,3 +39,18 @@ git clone -b automated https://PERSONALACCESSTOKEN@github.com/fgmp/ncov2019-arti
 ### 3. Editing configuration files
 - In the `ncov2019-artic-nf-GECO/conf/redcap.config`, replace `redcap_url` with `https://geco.ritm-edc.net/redcap/api/` and the `redcap_token` with `YOURWORKING_REDCAP_TOKEN`
 - In the system's `/etc/hosts` file, add `192.168.20.33 geco.ritm-edc.net` above the IPv6 capable hosts
+- Place the `hdf5` folder into the `ncov2019-artic-nf-GECO/conda/artic-env/lib/`
+
+
+### 4. Setting up a `conda` environment
+- Create `conda` environment and activate
+```
+conda create -n nextflowv20.10
+
+conda activate nextflowv20.10
+```
+
+- Install `nextflow` version `20.10` in the created environment
+```
+conda install -c bioconda nextflow=20.10
+```
